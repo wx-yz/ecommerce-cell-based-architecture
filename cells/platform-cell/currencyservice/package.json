@@ -1,0 +1,22 @@
+{
+  "name": "currencyservice",
+  "version": "1.0.0",
+  "description": "Currency conversion service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "@grpc/proto-loader": "^0.7.0",
+    "pino": "^8.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
