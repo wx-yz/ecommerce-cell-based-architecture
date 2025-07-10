@@ -20,7 +20,8 @@ Each cell maps to a separate Choreo project, following the cell-based architectu
 | Marketing Cell | `ecommerce-marketing` | adservice |
 | Platform Cell | `ecommerce-platform` | currencyservice |
 
-### Project Configuration\nEach project will be configured with:
+### Project Configuration
+Each project will be configured with:
 - **Region**: US (primary), EU (secondary)
 - **Environment**: Development, Testing, Production
 - **Git Repository**: This monorepo with cell-specific paths
