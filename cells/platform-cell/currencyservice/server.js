@@ -4,8 +4,8 @@ const protoLoader = require('@grpc/proto-loader');
 const pino = require('pino');
 const { v4: uuidv4 } = require('uuid');
 
-const PROTO_PATH = path.join(__dirname, '../../../shared/protos/demo.proto');
-const PORT = process.env.PORT || 7000;
+const PROTO_PATH = path.join(__dirname, 'demo.proto');
+const PORT = process.env.PORT || 8081;
 
 const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
   keepCase: true,
