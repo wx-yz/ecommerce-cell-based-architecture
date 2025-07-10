@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net"
-	"os"
 	"strings"
 	"sync"
 	"time"
@@ -19,7 +18,7 @@ import (
 )
 
 const (
-	port = 3550
+	port = 8081
 )
 
 type Product struct {

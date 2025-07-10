@@ -17,6 +17,6 @@ WORKDIR /root/
 COPY --from=builder /app/productcatalogservice .
 COPY products.json .
 
-EXPOSE 3550
+EXPOSE 8081
 
 CMD ["./productcatalogservice"]

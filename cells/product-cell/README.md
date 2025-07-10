@@ -1,1 +1,50 @@
-# Product Cell\n\n## Overview\nThe Product Cell represents the Product Catalog and Recommendations domain. It manages product information and provides personalized recommendations.\n\n## Components\n- **productcatalogservice**: Go-based service for product catalog management\n- **recommendationservice**: Python-based service for product recommendations\n\n## Responsibilities\n- Product catalog management\n- Product search functionality\n- Product recommendations based on user behavior\n- Product metadata management\n\n## API Endpoints\n### Product Catalog Service\n- `ListProducts()`: Get all products\n- `GetProduct(id)`: Get specific product details\n- `SearchProducts(query)`: Search products by query\n\n### Recommendation Service\n- `ListRecommendations(user_id, product_ids)`: Get recommended products\n\n## Dependencies\n- No external cell dependencies\n- Uses internal product data\n- Recommendation engine uses ML models\n\n## Deployment Configuration\n- **Runtime**: Go for catalog service, Python for recommendation service\n- **Port**: 3550 (catalog), 8080 (recommendations)\n- **Data**: JSON file for product catalog, ML models for recommendations\n\n## Environment Variables\n- `PORT`: Server port\n- `PRODUCT_CATALOG_SERVICE_ADDR`: Internal catalog service address\n- `DISABLE_TRACING`: Disable OpenTelemetry tracing\n- `DISABLE_PROFILER`: Disable profiler\n\n## Choreo Deployment\nThis cell is deployed as a single Choreo project with two components:\n1. Product Catalog Service (Go)\n2. Recommendation Service (Python)\n\n## Files in this Cell\n- `productcatalogservice/`: Product catalog service source code\n- `recommendationservice/`: Recommendation service source code\n- `choreo/`: Choreo-specific configuration files\n- `README.md`: This file
+# Product Cell
+
+## Overview
+The Product Cell represents the Product Catalog and Recommendations domain. It manages product information and provides personalized recommendations.
+
+## Components
+- **productcatalogservice**: Go-based service for product catalog management
+- **recommendationservice**: Python-based service for product recommendations
+
+## Responsibilities
+- Product catalog management
+- Product search functionality
+- Product recommendations based on user behavior
+- Product metadata management
+
+## API Endpoints
+### Product Catalog Service
+- `ListProducts()`: Get all products
+- `GetProduct(id)`: Get specific product details
+- `SearchProducts(query)`: Search products by query
+
+### Recommendation Service
+- `ListRecommendations(user_id, product_ids)`: Get recommended products
+
+## Dependencies
+- No external cell dependencies
+- Uses internal product data
+- Recommendation engine uses ML models
+
+## Deployment Configuration
+- **Runtime**: Go for catalog service, Python for recommendation service
+- **Port**: 3550 (catalog), 8080 (recommendations)
+- **Data**: JSON file for product catalog, ML models for recommendations
+
+## Environment Variables
+- `PORT`: Server port
+- `PRODUCT_CATALOG_SERVICE_ADDR`: Internal catalog service address
+- `DISABLE_TRACING`: Disable OpenTelemetry tracing
+- `DISABLE_PROFILER`: Disable profiler
+
+## Choreo Deployment
+This cell is deployed as a single Choreo project with two components:
+1. Product Catalog Service (Go)
+2. Recommendation Service (Python)
+
+## Files in this Cell
+- `productcatalogservice/`: Product catalog service source code
+- `recommendationservice/`: Recommendation service source code
+- `choreo/`: Choreo-specific configuration files
+- `README.md`: This file
