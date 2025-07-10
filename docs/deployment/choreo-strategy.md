@@ -22,8 +22,7 @@ Each cell maps to a separate Choreo project, following the cell-based architectu
 
 ### Project Configuration
 Each project will be configured with:
-- **Region**: US (primary), EU (secondary)
-- **Environment**: Development, Testing, Production
+- **Region**: US (primary), EU (secondary)- **Environment**: Development, Testing, Production
 - **Git Repository**: This monorepo with cell-specific paths
 - **Build Pipeline**: Automated CI/CD per cell
 
@@ -31,7 +30,7 @@ Each project will be configured with:
 
 ### Phase 1: Foundation Services
 1. **Platform Cell** (currencyservice)
-   - No dependencies\n
+   - No dependencies
    - Provides utility services
    - Deploy first to ensure availability
 2. **Product Cell** (productcatalogservice, recommendationservice)
@@ -45,7 +44,7 @@ Each project will be configured with:
 
 ### Phase 2: Business Logic Services
 4. **Payment Cell** (paymentservice)
-   - No dependencies\n
+   - No dependencies
    - Self-contained domain
    - Mock payment processing
 5. **Fulfillment Cell** (shippingservice, emailservice)
@@ -88,7 +87,8 @@ Each project will have components configured with:
 - **Build Pack**: Language-specific (Go, Node.js, Python, Java, .NET)
 - **Port**: Component-specific port configuration
 - **Environment Variables**: Cell-specific configuration
-### 3. Environment Configuration\nEach project will have three environments:
+### 3. Environment Configuration
+Each project will have three environments:
 - **Development**: For feature development and testing
 - **Testing**: For integration testing and QA
 - **Production**: For live traffic
@@ -234,7 +234,8 @@ configurations:
 - **Service-to-Service**: Choreo managed service tokens
 - **External APIs**: API keys in secrets
 - **User Authentication**: Session-based (frontend cell)
-### Authorization\n- **API Gateway**: Choreo managed API gateway
+### Authorization
+- **API Gateway**: Choreo managed API gateway
 - **Rate Limiting**: Per-cell rate limiting
 - **Access Control**: Role-based access per cell
 ## Scaling Configuration
